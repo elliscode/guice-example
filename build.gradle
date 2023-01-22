@@ -1,0 +1,21 @@
+plugins {
+    // Apply the java-library plugin for API and implementation separation.
+    id 'java'
+}
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    // junit
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+	// guice dependencies
+    implementation group: 'com.google.inject', name: 'guice', version: '4.1.0'
+}
